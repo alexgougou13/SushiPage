@@ -19,4 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
           menuIcon.src = 'assets/menu.svg'; 
       });
   });
+
+  const btn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+          btn.classList.add('show');
+      } else {
+          btn.classList.remove('show');
+      }
+  });
+
+  btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
 });

@@ -338,5 +338,40 @@ a {
     left: calc(50vw - 50px);
     display: flex;
   }
+  .footer ul{
+    gap:20px;
+  }
 }
 
+@media screen and (min-width: 1061px) and (max-width: 1269px) {
+  .header__menu{
+    gap:40px;
+  }
+}
+@media screen and (max-width: 1434px) {
+  .header__logo{
+    padding:19px;
+  }
+}
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #c46166;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+#scrollToTopBtn.show {
+  display: flex;
+}
+#scrollToTopBtn img{
+  transform: rotate(-45deg);
+}
